@@ -20,3 +20,7 @@ Afim de solucionar esse problema, precisamos de um remote config. Esse projeto e
 * `Maven`
 * `Uma IDE com suporte à Spring`
 
+
+## Licença
+
+Este projeto está sob a MIT License - veja o arquivo [LICENSE.md](./LICENSE.md) para mais detalhes.
