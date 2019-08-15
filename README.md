@@ -1,5 +1,7 @@
 # Spring Cloud Config
 
+<img align="right" width="200" height="100" src="./icon-spring-cloud.svg">
+
 Esse projeto tem como objetivo ser um exemplo simples de implementação de um serviço Spring Cloud Config e um serviço Rest que utiliza dele para consumir suas configurações.
 
 ## Introdução 
@@ -8,4 +10,13 @@ Quando estamos criando um microsserviço o primeiro, o primeiro passo que nos de
 
 Inicialmente essas configurações não mudam, mas existem coisas como a URL de conexão com banco de dados ou features que dependem de flags que indicam qual deve ser sua ação. Para isso ser alterado, é necessário parar a aplicação e fazer um novo deploy com as alterações necessárias.
 
-Afim de solucionar esse problema, precisamos de um remote config. Esse projeto exemplo, traz uma implementação do Spring Cloud Config, que tem como objetivo ser um microsserviço que disponibiliza essas configurações para outros microsserviços utilizarem.  A partir da alteração dessas configurações, com apenas a chamada de um end-point Rest é possível alterar as configurações do projeto em produção. Normalmente os arquivos de configurações são disponibilizados em um versionador, no nosso caso o GitHub. Como indica a imagem a baixo:
+
+<img align="right" width="500" height="300" src="./example-spring-cloud.jpeg">
+Afim de solucionar esse problema, precisamos de um remote config. Esse projeto exemplo, traz uma implementação do Spring Cloud Config, que tem como objetivo ser um microsserviço que disponibiliza essas configurações para outros microsserviços utilizarem.  A partir da alteração dessas configurações, com apenas a chamada de um end-point Rest é possível alterar as configurações do projeto em produção. Normalmente os arquivos de configurações são disponibilizados em um versionador, no nosso caso o GitHub. Como indica a imagem: 
+
+
+## Requisitos
+* `Java`
+* `Maven`
+* `Uma IDE com suporte à Spring`
+
