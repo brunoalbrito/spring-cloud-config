@@ -111,7 +111,20 @@ server.port=8080
 spring.main.banner-mode=off
 ```
 
+## Vamos Testar
 
+Agora podemos dar um start nas nossas aplicações:
+
+1. Primeiro vamos ligar nosso serviço: 
+Acessando o http://localhost:8080/api/message, vamos obter como retorno a mensagem padrão quando as configurações não foram associadas ao projeto.
+
+2. Agora podemos dar um start na nossa aplicação server e podemos acessar o endereço para verificar se ela está conseguindo acessar os arquivos de configuração:
+
+3. Nesse passa, vamos rodar executar uma requisição para que nosso cliente chame o servidor, fazendo com que ele busque as configurações e as traga para aplicação cliente.
+
+## Considerações
+
+Chegamos ao fim de nosso projeto básico, abaixo estão às referências de onde foram consumidos materias para construtir esse projeto.
 
 
 ## Licença 
