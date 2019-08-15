@@ -23,4 +23,7 @@ Afim de solucionar esse problema, precisamos de um remote config. Esse projeto e
 
 ## Licença
 
-Este projeto está sob a MIT License - veja o arquivo [LICENSE.md](./LICENSE.md) para mais detalhes.
+Este projeto está sob a MIT License - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+### Desenvolvido por: 
+[Bruno Albuquerque Brito](https://www.linkedin.com/in/bruno-albuquerque-brito-07258590)
