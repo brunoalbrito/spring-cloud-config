@@ -115,6 +115,7 @@ spring.main.banner-mode=off
 
 
 ## Licença 
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 Este projeto está sob a MIT License - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
