@@ -12,7 +12,7 @@ Inicialmente essas configurações não mudam, mas existem coisas como a URL de 
 
 
 <img align="right" width="500" height="300" src="./example-spring-cloud.jpeg">
-Afim de solucionar esse problema, precisamos de um remote config. Esse projeto exemplo, traz uma implementação do Spring Cloud Config, que tem como objetivo ser um microsserviço que disponibiliza essas configurações para outros microsserviços utilizarem.  A partir da alteração dessas configurações, com apenas a chamada de um end-point Rest é possível alterar as configurações do projeto em produção. Normalmente os arquivos de configurações são disponibilizados em um versionador, no nosso caso o GitHub. Como indica a imagem: 
+A fim de solucionar esse problema, precisamos de um remote config. Esse projeto exemplo, traz uma implementação do Spring Cloud Config, que tem como objetivo ser um microsserviço que disponibiliza essas configurações para outros microsserviços utilizarem.  A partir da alteração dessas configurações, com apenas a chamada de um end-point Rest é possível alterar as configurações do projeto em produção. Normalmente os arquivos de configurações são disponibilizados em um versionador, no nosso caso o GitHub. Como indica a imagem: 
 
 
 ## Requisitos
