@@ -20,13 +20,16 @@ A fim de solucionar esse problema, precisamos de um remote config. Esse projeto 
 * `Maven`
 * `Uma IDE com suporte à Spring`
 
-## Arquivos de configurações dos projetos Spring Cloud Applcation
+## Arquivos de configurações dos projetos Spring Cloud Config Applcation
 
-Para aplicações Spring Cloud Application, é necessário especificar o spring.application.name e spring.cloud.config.server.git.uri no cado do servidor e spring.cloud.config.uir no caso do client. Essas configurações são feitas utilizam o arquivo bootstrap (.properties ou .yml), que gera um contexto acima do application, sendo assim, eles são lidos antes das configurações application (.properties ou .yml).
+Para aplicações Spring Cloud Application, é necessário especificar o spring.application.name e spring.cloud.config.server.git.uri no cado do servidor e spring.cloud.config.uri no caso do client. Essas configurações são feitas utilizam o arquivo bootstrap (.properties ou .yml), que gera um contexto acima do application, sendo assim, eles são lidos antes das configurações application (.properties ou .yml).
 
 ## Vamos começar
 
-Vamos primeiro criar nosso servidor Spring Cloud Config Server. No Spring Initializr, crie um projeto que possui apenas a dependência **Config Server**. 
+
+### Server
+
+Vamos primeiro criar nosso servidor Spring Cloud Config Server. No [Spring Initializr](https://start.spring.io/), crie um projeto que possui apenas a dependência **Config Server**. 
 
 Agora abra na sua IDE e importe um projeto Maven, na classe Application que contem nosso main, adicione a anotação *@EnableConfigServer*. 
 
@@ -41,10 +44,79 @@ public class SpringCloudConfigApplication {
 }
 ```
 
+Agora devemos configurar nossos arquivos boostrap e application:
 
-## Licença
+* boostrap.properties:
+
+```
+spring.cloud.config.server.git.uri: https://github.com/brunoalbrito/spring-cloud-config/
+#Para utilizar arquivos localmente
+#spring.cloud.config.server.git.uri=file:///C:/Users/Bruno/Documents/spring-cloud-config
+spring.cloud.config.server.git.searchPaths=configuration-properties
+spring.cloud.config.server.git.skip-ssl-validation=true
+management.security.enabled=false
+```
+
+* application.properties:
+
+```
+spring.application.name=spring-cloud-config-server
+server.port=8980
+
+spring.main.banner-mode=off
+```
+
+
+### Client
+
+Já no Cliente vamos criar um projeto com as depêndencias:
+
+* **Spring Web Starter**
+* **Config Client**
+* **Spring Boot Actuator**
+
+Na nossa Controller vamos adicionar a seguinte estrutura:
+
+```java
+@RefreshScope
+@RestController
+@RequestMapping("/api")
+public class MessageResource {
+
+	@Value("${message: Default Hello}")
+	private String message;
+
+	@GetMapping("/message")
+	public String message() {
+		return message;
+	}
+}
+```
+
+E os arquivos de configuração conforme o exemplo:
+
+* boostrap.properties:
+
+```
+spring.application.name=config-client
+spring.cloud.config.uri=http://localhost:8980
+management.security.enabled=false
+management.endpoints.web.exposure.include=*
+```
+
+* application.properties:
+
+```
+server.port=8080
+spring.main.banner-mode=off
+```
+
+
+
+
+## Licença 
 
 Este projeto está sob a MIT License - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
 ### Desenvolvido por: 
-[Bruno Albuquerque Brito](https://www.linkedin.com/in/bruno-albuquerque-brito-07258590)
+* Bruno Albuquerque Brito - [LinkedIn](https://www.linkedin.com/in/bruno-albuquerque-brito-07258590)
