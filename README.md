@@ -20,6 +20,10 @@ A fim de solucionar esse problema, precisamos de um remote config. Esse projeto 
 * `Maven`
 * `Uma IDE com suporte à Spring`
 
+## Arquivos de configurações dos projetos Spring Cloud Applcation
+
+Para aplicações Spring Cloud Application, é necessário especificar o spring.application.name e spring.cloud.config.server.git.uri no cado do servidor e spring.cloud.config.uir no caso do client. Essas configurações são feitas utilizam o arquivo bootstrap (.properties ou .yml), que gera um contexto acima do application, sendo assim, eles são lidos antes das configurações application (.properties ou .yml).
+
 
 ## Licença
 
