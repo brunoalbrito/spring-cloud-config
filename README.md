@@ -24,6 +24,23 @@ A fim de solucionar esse problema, precisamos de um remote config. Esse projeto 
 
 Para aplicações Spring Cloud Application, é necessário especificar o spring.application.name e spring.cloud.config.server.git.uri no cado do servidor e spring.cloud.config.uir no caso do client. Essas configurações são feitas utilizam o arquivo bootstrap (.properties ou .yml), que gera um contexto acima do application, sendo assim, eles são lidos antes das configurações application (.properties ou .yml).
 
+## Vamos começar
+
+Vamos primeiro criar nosso servidor Spring Cloud Config Server. No Spring Initializr, crie um projeto que possui apenas a dependência **Config Server**. 
+
+Agora abra na sua IDE e importe um projeto Maven, na classe Application que contem nosso main, adicione a anotação *@EnableConfigServer*. 
+
+```java
+@EnableConfigServer
+@SpringBootApplication
+public class SpringCloudConfigApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringCloudConfigApplication.class, args);
+	}
+}
+```
+
 
 ## Licença
 
