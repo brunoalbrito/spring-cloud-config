@@ -1,0 +1,17 @@
+http://appsdeveloperblog.com/spring-cloud-config-server-searchpaths/
+https://howtodoinjava.com/spring-cloud/spring-cloud-config-server-git/
+https://spring.io/guides/gs/centralized-configuration/
+https://stackoverflow.com/questions/52646183/how-to-configure-a-github-repository-as-a-config-repo-for-spring-cloud-server
+https://cloud.spring.io/spring-cloud-static/spring-cloud-config/1.3.3.RELEASE/multi/multi__spring_cloud_config_server.html
+https://howtodoinjava.com/spring-cloud/spring-cloud-config-server-git/
+
+Como atualizar
+https://stackoverflow.com/questions/49363043/spring-boot-2-refresh-properties-on-the-fly-not-working
+
+
+Video
+https://www.youtube.com/watch?v=b2ih5RCuxTM
+
+https://emmanuelneri.com.br/2018/07/09/configuracoes-distribuidas-com-spring-cloud-config/
+http://blog.marcosbarbero.com/pt_BR/integrating-vault-spring-cloud-config/
+https://howtodoinjava.com/spring-cloud/spring-cloud-config-server-git/
